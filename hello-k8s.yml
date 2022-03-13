@@ -34,7 +34,7 @@ spec:
           image: CONTAINER_IMAGE
           resources:
             requests:
-              cpu: "1000m"
+              cpu: "500m"
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
