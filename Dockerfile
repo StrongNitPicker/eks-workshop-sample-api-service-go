@@ -8,7 +8,7 @@ RUN useradd -u 10001 app
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
-FROM 123229683880.dkr.ecr.us-east-1.amazonaws.com/alpine:3.10.0
+FROM scratch
 
 COPY --from=builder /go/src/github.com/eks-workshop-sample-api-service-go/main /main
 COPY --from=builder /etc/passwd /etc/passwd
